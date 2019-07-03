@@ -1,4 +1,4 @@
-let c = new Emoji_debug({log:1});
+let c = new Emoji_debug();
 
 c.g('this is group one')
     c.log('normal log');

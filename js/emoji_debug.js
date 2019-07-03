@@ -1,8 +1,8 @@
 class Emoji_debug {
 
     constructor(obj = {}) {
-        this.emoji ={};
-        this.emoji.error = obj.error? obj.error:'😱';
+        this.emoji = {};
+        this.emoji.error = obj.error ? obj.error:'😱';
         this.emoji.worning = obj.worning ? obj.worning:"😥";
         this.emoji.log = obj.log ? obj.log:'😃';
         this.emoji.fontsize = 50;
@@ -15,7 +15,6 @@ class Emoji_debug {
         console.error("%c"+this.emoji.error,`font-size:${this.emoji.fontsize}px`, ...arguments)
     }
     warn(){
-        console.warn(this.emoji.worning,...arguments)
         console.warn("%c"+this.emoji.worning,`font-size:${this.emoji.fontsize}px`, ...arguments)
     }
 
