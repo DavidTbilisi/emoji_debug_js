@@ -10,6 +10,8 @@ class Emoji_debug {
         this.emoji.log = obj.log ? obj.log:['😃',"👀","🙂"];
         this.emoji.fontsize = obj.fontsize ? obj.fontsize: 50;
         this.errCount = 1;
+        // todo: switch to safely turn off logs;
+        this.on = true;
     }
     log(){
         console.log("%c"+this.emoji.log.randVal(),`font-size:${this.emoji.fontsize}px`, ...arguments)

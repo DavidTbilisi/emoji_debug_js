@@ -1,6 +1,6 @@
 # emoji_debug_js
 
-have a fun while debugging
+have a fun while [console logging](https://developer.mozilla.org/en-US/docs/Web/API/Window/console)
 
 ## Options
 
@@ -32,15 +32,19 @@ Use log levels
   ```javascript
 	  c.worn('something');
   ```
+[Table log](https://developer.mozilla.org/en-US/docs/Web/API/Console/table)
+  ```javascript
+	  c.table({key:'value'});
+  ```
 
-Group logs
+[Group logs](https://developer.mozilla.org/en-US/docs/Web/API/Console/group)
   ```javascript
 	c.g('Group name');
 	    c.log('something');
 	c.gEnd();
   ```
 
-Collapsed group logs
+[Collapsed group](https://developer.mozilla.org/en-US/docs/Web/API/Console/group) logs 
   ```javascript
 	c.gc('Group name');
 	  c.log('something');
