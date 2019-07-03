@@ -7,10 +7,10 @@ have a fun while debugging
    ```javascript 
    // defaluts
    let config  =  {
-	fontsize: 50, 
-       log:"😃",
+	    fontsize: 50, 
+       log:['😃',"👀","🙂"],
        worning:"😥",
-       error:'😱'
+       error:['😑','😱','😠'],
        }
    let  c  = new  Emoji_debug(config)
    ```
