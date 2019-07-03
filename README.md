@@ -8,9 +8,9 @@ have a fun while debugging
    // defaluts
    let config  =  {
 	    fontsize: 50, 
-       log:['😃',"👀","🙂"],
+       log:['😃',"👀","🙂"], // gets random from array
        worning:"😥",
-       error:['😑','😱','😠'],
+       error:['😑','😱','😠'], // showing by level
        }
    let  c  = new  Emoji_debug(config)
    ```
@@ -37,6 +37,13 @@ Group logs
   ```javascript
 	c.g('Group name');
 	    c.log('something');
+	c.gEnd();
+  ```
+
+Collapsed group logs
+  ```javascript
+	c.gc('Group name');
+	  c.log('something');
 	c.gEnd();
   ```
 
