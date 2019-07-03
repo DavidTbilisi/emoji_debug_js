@@ -35,9 +35,9 @@ Use log levels
 
 Group logs
   ```javascript
-	  c.g('Group name');
-			c.log('something');
-		c.gEnd();
+	c.g('Group name');
+	    c.log('something');
+	c.gEnd();
   ```
 
 	
