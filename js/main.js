@@ -1,14 +1,13 @@
-let c = new Emoji_debug();
-c.on = false;
-c.gc('random emoji console.log')
+emo.on = false;
+emo.gc('random emoji console.log')
     for (let i = 1; i<= 10; i++) {
-        c.log('normal log'+i);
+        emo.log('normal log'+i);
     }
-c.gEnd();
-c.gc('error count emoji ')
+emo.gEnd();
+emo.gc('error count emoji ')
     for (let i = 1; i<= 20; i++) {
-        c.error('this is error message '+i);
+        emo.error('this is error message '+i);
     }
-c.gEnd();
+emo.gEnd();
 
-    c.table({index1:"value1"});
+    emo.table({index1:"value1"});

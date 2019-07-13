@@ -1,17 +1,30 @@
 class Emoji_debug {
-
-    constructor(obj = {}) {
+    constructor( obj = {} ) {
         Array.prototype.randVal = function(){
             return this[Math.floor(Math.random()*this.length)];
         };
         this.emoji = {};
         this.emoji.error = obj.error ? obj.error:['😑','😱','😠'];
         this.emoji.worning = obj.worning ? obj.worning:"😥";
-        this.emoji.log = obj.log ? obj.log:['😃',"👀","🙂"];
+        this.emoji.log = obj.log ? obj.log:["😃","🙂"];
         this.emoji.fontsize = obj.fontsize ? obj.fontsize: 50;
         this.errCount = 1;
         // todo: switch to safely turn off logs;
         this.on = true;
+        let that = this;
+        let handler = {
+            get: function(target, name) {
+                if (that.on) {
+                    return target[name];
+                } else {
+                    return that.empty;
+                }
+            }
+        }
+        this.p = new Proxy(this, handler);
+    }
+    empty() {
+        return ''
     }
     log(){
         console.log("%c"+this.emoji.log.randVal(),`font-size:${this.emoji.fontsize}px`, ...arguments)
@@ -42,5 +55,6 @@ class Emoji_debug {
     gEnd(){
         console.groupEnd()
     }
-
 }
+
+let emo = new Emoji_debug().p;
