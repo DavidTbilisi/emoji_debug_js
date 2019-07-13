@@ -58,3 +58,17 @@ class Emoji_debug {
 }
 
 let emo = new Emoji_debug().p;
+let ed = new Emoji_debug();
+
+
+let handler = {
+    get: function(target, name) {
+        if (ed.on) {
+            return target[name];
+        } else {
+            return ed.empty;
+        }
+    }
+}
+ed.on = false;
+let switchable = new Proxy(ed, handler);
